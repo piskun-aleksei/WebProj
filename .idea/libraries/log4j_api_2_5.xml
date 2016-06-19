@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="log4j-api-2.5">
+    <CLASSES>
+      <root url="jar://C:/Tomcat/lib/log4j-api-2.5.jar!/" />
+      <root url="jar://C:/Tomcat/lib/log4j-core-2.5.jar!/" />
+      <root url="jar://C:/Tomcat/lib/log4j-jul-2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

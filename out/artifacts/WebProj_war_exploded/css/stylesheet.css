@@ -1,0 +1,328 @@
+/*@font-face {
+	    font-family: Bauhaus;
+	    src: local("Bauhaus 93"),
+         url(/tff/bauhaus.ttf);
+}*/
+body {
+    margin: 0;
+    padding: 20px;
+    font: 13px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+}
+
+/* ---- Some Resets ---- */
+
+p,
+table, caption, td, tr, th {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+/* ---- Paragraphs ---- */
+
+p {
+    margin-bottom: 15px;
+}
+
+/* ---- Table ---- */
+
+table {
+    margin: auto !important;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    width: 90%;
+    font-size: 25px;
+}
+
+caption {
+    text-align: left;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+table td,
+table th {
+    padding: 5px;
+    border: 1px solid #fff;
+    border-width: 0 1px 1px 0;
+}
+
+thead th {
+    background: #91c5d4;
+}
+
+thead th[colspan],
+thead th[rowspan] {
+    background: #66a9bd;
+}
+
+tbody th,
+tfoot th {
+    text-align: left;
+    background: #91c5d4;
+}
+
+tbody td,
+tfoot td {
+    text-align: center;
+    background: #d5eaf0;
+}
+
+tfoot th {
+    background: #b0cc7f;
+}
+
+tfoot td {
+    background: #d7e1c5;
+    font-weight: bold;
+}
+
+tbody tr.odd td {
+    background: #bcd9e1;
+}
+
+.container {
+    border: 5px solid #0081FF;
+    border-radius: 10px;
+}
+
+.visible {
+    display: block !important;
+}
+
+.login-wrapper {
+    display: none;
+    background-color: white;
+    border: 5px solid #0081FF;
+    border-radius: 10px;
+    width: 550px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.register-wrapper {
+    display: none;
+    background-color: white;
+    border: 5px solid #0081FF;
+    border-radius: 10px;
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.input-field-unchecked {
+    display: block;
+    height: 60px;
+    width: 400px;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+    margin: 30px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.input-field {
+    display: block;
+    height: 60px;
+    width: 400px;
+    background-image: url(/png/back-checked.png);
+    border-radius: 8px;
+    margin: 30px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.text-paragraph {
+    text-align: center;
+    display: block;
+    height: 40px;
+    border-radius: 8px;
+    margin: 30px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.custom-table {
+    background-color: #d8dfe3;
+    border-radius: 8px;
+    margin: 0 auto;
+    font-family: Consolas;
+    font-size: 20px;
+    text-align: center;
+}
+
+.custom-table-header-cell {
+
+}
+
+.custom-table-cell {
+
+}
+
+.custom-table-row {
+    margin: 0 auto;
+}
+
+.custom-table-header-row {
+    margin: 0 auto;
+}
+
+.desc-field {
+    text-align: center;
+    display: block;
+    height: 150px;
+    width: 400px;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+    margin: 30px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.input-button {
+    display: block;
+    height: 50px;
+    width: 400px;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+    margin: 30px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.authentication {
+    float: left;
+}
+
+.login-message-wrapper {
+    position: absolute;
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 35px;
+    text-align: center;
+    color: darkmagenta;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.footer-message-wrapper {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15px;
+    margin-bottom: 0%;
+    font-size: 25px;
+    text-align: center;
+    color: #2a728b;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.auth-link {
+    margin: 3px;
+    font-size: 25px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.header-container {
+    margin: 1px;
+    padding: 1px;
+    height: 7.5%;
+    width: 100%;
+    float: none;
+    font-size: 20px;
+}
+
+.header-container {
+    margin: 10px;
+    padding: 1px;
+    height: 7.5%;
+    width: 100%;
+    float: none;
+    font-size: 20px;
+}
+
+.custom-button {
+    display: inline-block;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-color: #a7b5e8;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.locale {
+    float: right;
+    margin: 3px;
+    font-size: 25px;
+}
+
+.locale-button {
+    display: inline-block;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-color: #a7b5e8;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.background-wrapper {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.select-center {
+    display: block;
+    height: 40px;
+    width: 400px;
+    background-color: rgba(211, 211, 211, 0.3);
+    border-radius: 8px;
+    margin: 30px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 25px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.error-message {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 30px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: Consolas;
+    font-size: 20px;
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    color: #737373;
+}
