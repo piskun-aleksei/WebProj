@@ -5,7 +5,7 @@
 <fmt:setBundle basename="resources.content" var="rb"/>
 <html>
 <head>
-    <title><fmt:message key="Label.filmsTitle" bundle="${rb}"/></title>
+    <title><fmt:message key="Label.filmPaymentHead" bundle="${rb}"/></title>
     <link rel="stylesheet" href="/css/stylesheet.css">
 </head>
 <body>

@@ -10,6 +10,7 @@
     </head>
     <body>
         <%@ include file="shared/header.jsp"%>
+        <img src="../png/posters.png" class="centralized-image">
         <article class="container">
             <form name="FilmsForm" action="controller" method="POST">
                 <input type="hidden" name="command" value="showFilms"/>

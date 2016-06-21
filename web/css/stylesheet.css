@@ -323,6 +323,14 @@ tbody tr.odd td {
     text-align: center;
 }
 
+.centralized-image{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
 ::-webkit-input-placeholder {
     color: #737373;
 }

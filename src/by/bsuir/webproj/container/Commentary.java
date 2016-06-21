@@ -90,4 +90,5 @@ public class Commentary extends Entity {
     public void setTime(String time) {
         this.time = time;
     }
+
 }
