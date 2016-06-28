@@ -118,12 +118,12 @@ public class UserDAO extends AbstractDAO<User> {
         return users;
     }
 
-    public User findEntityByString(String id) throws DAOException {
+    public User findEntityByLogin(String login) throws DAOException {
         User user = null;
         PreparedStatement st = null;
         try {
             st = connection.getStatement(SQL_SELECT_USER_BY_LOGIN);
-            st.setString(1, id);
+            st.setString(1, login);
             ResultSet resultSet = st.executeQuery();
             if (resultSet.next()) {
                 user = new User();
@@ -156,6 +156,16 @@ public class UserDAO extends AbstractDAO<User> {
         PreparedStatement st = null;
         boolean result = false;
         try {
+            st = connection.getStatement(SQL_SELECT_ALL_USERS);
+            ResultSet resultSet = st.executeQuery();
+
+            while (resultSet.next()) {
+                if(resultSet.getString(LOGIN).equals(entity.getLogin())){
+                    result = false;
+                    return result;
+                }
+            }
+
             st = connection.getStatement(SQL_INSERT_USER);
             st.setString(1, entity.getLogin());
             st.setString(2, entity.getPassword());

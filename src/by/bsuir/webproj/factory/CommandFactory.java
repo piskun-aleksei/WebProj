@@ -18,7 +18,7 @@ public class CommandFactory {
             return current;
         }
         try {
-            CommandEnum currentEnum = CommandEnum.valueOf(action.toUpperCase());
+            CommandEnum currentEnum = CommandEnum.valueOf(action.toUpperCase()); /** Check for a command to exist in a system **/
             current = currentEnum.getCurrentCommand();
         } catch (IllegalArgumentException e) {
             request.setAttribute("wrongAction", action);

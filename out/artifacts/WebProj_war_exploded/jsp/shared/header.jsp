@@ -1,7 +1,8 @@
 <%@ taglib prefix="ctg" uri="customtags" %>
 <div class="header-container">
     <ctg:authCheckingTag/>
-    <input type="hidden" class="error-check" value="${errorLoginPassMessage}">
+    <input type="hidden" class="error-check-login" value="${errorLoginMessage}">
+    <input type="hidden" class="error-check-register" value="${errorRegisterMessage}">
     <div>
         <c:if test="${login != null}">
         <c:if test="${isAdmin == true}">
@@ -26,7 +27,7 @@
             <input type="hidden" name="page" value="/jsp/login.jsp" />
             <input type="text" name="login" placeholder="<fmt:message key="Label.login" bundle="${rb}"/>" class="input-field"/>
             <input type="password" name="password" placeholder="<fmt:message key="Label.password" bundle="${rb}"/>" class="input-field" value="" pattern="[A-z]{1,1}[A-z0-9]{3,}" required/>
-            <div class="error-message">${errorLoginPassMessage}</div>
+            <div class="error-message">${errorLoginMessage}</div>
             <br/>
             <br/>
             <input type="submit" name="loginButton" class="input-button" value=<fmt:message key="Button.login" bundle="${rb}" /> />
@@ -37,16 +38,16 @@
         <form name="RegisterForm" action="controller" method="POST">
             <input type="hidden" name="command" value="register" />
             <input type="hidden" name="page" value="/jsp/registration.jsp" />
-            <input type="text" name="login" placeholder="<fmt:message key="Label.login" bundle="${rb}"/>" class="input-field" required/>
-            <input type="password" id="password" name="password"
+            <input type="text" value="${regLogin}" name="login" placeholder="<fmt:message key="Label.login" bundle="${rb}"/>" class="input-field" required/>
+            <input type="password" value="${regPass}" id="password" name="password"
                    placeholder="<fmt:message key="Label.password" bundle="${rb}"/>" class="input-field"
                    onchange="validatePassword('${locale}')" value="" pattern="[A-z]{1,1}[A-z0-9]{3,}" required/>
-            <input type="password" id="retypePass"  name="retypePass"
+            <input type="password" value="${regPass}" id="retypePass"  name="retypePass"
                    placeholder="<fmt:message key="Label.retypePass" bundle="${rb}"/>" class="input-field"
                    onkeyup="validatePassword('${locale}')" value="" pattern="[A-z]{1,1}[A-z0-9]{3,}" required/>
-            <input type="text" name="name" placeholder="<fmt:message key="Label.name" bundle="${rb}"/>" class="input-field" required/>
-            <input type="text" name="surname" placeholder="<fmt:message key="Label.surname" bundle="${rb}"/>" class="input-field" required/>
-            ${wrongActionRegister}
+            <input type="text" name="name" value="${regName}" placeholder="<fmt:message key="Label.name" bundle="${rb}"/>" class="input-field" required/>
+            <input type="text" name="surname" value="${regSurname}" placeholder="<fmt:message key="Label.surname" bundle="${rb}"/>" class="input-field" required/>
+            <div class="error-message">${errorRegisterMessage}</div>
             <br/>
             <input type="submit" name="registerButton" class="input-button" value=<fmt:message key="Button.register" bundle="${rb}"/> />
         </form>

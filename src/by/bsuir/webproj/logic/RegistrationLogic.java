@@ -18,6 +18,7 @@ import java.sql.SQLException;
  */
 public class RegistrationLogic {
     private final static Logger LOGGER = LogManager.getLogger(RegistrationLogic.class);
+    private static User user;
 
     public static boolean registrate(String login, String password, String name, String surname) throws LogicException {
         boolean result = false;
@@ -27,7 +28,8 @@ public class RegistrationLogic {
             pool = ConnectionPool.getInstance();
             conn = pool.getConnection();
             UserDAO dao = new UserDAO(conn);
-            if (dao.addEntity(new User(login, CryptingHashHandler.getHash(password), 0, 1, false, name, surname))) {
+            user = new User(login, CryptingHashHandler.getHash(password), 0, 1, false, name, surname);
+            if (dao.addEntity(user)) {
                 result = true;
                 LOGGER.debug("User registered");
             }
@@ -39,5 +41,17 @@ public class RegistrationLogic {
         }finally {
             pool.closeConnection(conn);
         }
+    }
+
+    public static boolean isAdmin() {
+        return user.getIsAdmin();
+    }
+
+    public static int getUserId() {
+        return user.getId();
+    }
+
+    public static String getUserPassword() {
+        return user.getPassword();
     }
 }

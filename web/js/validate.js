@@ -50,10 +50,15 @@ function showLoginForm(){
     var registerButton = document.querySelector(".auth-link-register");
     var backButtonLogin = document.querySelector(".form-back-login");
     var backButtonRegister = document.querySelector(".form-back-register");
-    var error = document.querySelector(".error-check");
-    if(error.value){
+    var errorLogin = document.querySelector(".error-check-login");
+    var errorRegister = document.querySelector(".error-check-register");
+    if(errorLogin.value){
         document.querySelector(".background-wrapper").classList.toggle("visible");
         document.querySelector(".login-wrapper").classList.toggle("visible");
+    }
+    if(errorRegister.value){
+        document.querySelector(".background-wrapper").classList.toggle("visible");
+        document.querySelector(".register-wrapper").classList.toggle("visible");
     }
     loginButton.addEventListener("click", function(){
         document.querySelector(".background-wrapper").classList.toggle("visible");

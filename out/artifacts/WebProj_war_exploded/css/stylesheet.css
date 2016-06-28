@@ -1,15 +1,10 @@
-/*@font-face {
-	    font-family: Bauhaus;
-	    src: local("Bauhaus 93"),
-         url(/tff/bauhaus.ttf);
-}*/
+
 body {
     margin: 0;
     padding: 20px;
     font: 13px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
 }
 
-/* ---- Some Resets ---- */
 
 p,
 table, caption, td, tr, th {
@@ -18,13 +13,13 @@ table, caption, td, tr, th {
     font-weight: normal;
 }
 
-/* ---- Paragraphs ---- */
+
 
 p {
     margin-bottom: 15px;
 }
 
-/* ---- Table ---- */
+
 
 table {
     margin: auto !important;

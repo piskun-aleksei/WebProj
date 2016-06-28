@@ -1,10 +1,8 @@
 package by.bsuir.webproj.tag;
 
 import java.io.IOException;
-import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import java.util.StringTokenizer;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.TagSupport;
@@ -26,7 +24,7 @@ public class AuthCheckingTag extends TagSupport {
                 out.write("<div class=\"authentication\">\n" +
                         "        <button class=\"auth-link-login custom-button\" >"+ resource.getString("Button.login")+"</button>\n" +
                         "        <button class=\"auth-link-register custom-button\"  >"+resource.getString("Button.register")+"</button>\n" +
-                        "    </div>");
+                        "    </div>"); /** Put a login and registration buttons, if there is no logged user yet **/
             }
             else{
                 out.write("<div class=\"authentication\">\n" +

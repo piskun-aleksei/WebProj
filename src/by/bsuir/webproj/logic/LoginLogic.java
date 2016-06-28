@@ -9,10 +9,6 @@ import by.bsuir.webproj.pool.WrapperConnection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
-import java.sql.SQLException;
-
 /**
  * Created by Алексей on 24.04.2016.
  */
@@ -21,14 +17,13 @@ public class LoginLogic {
     private static User user;
 
     public static String login(String login, String password) throws LogicException {
-
         ConnectionPool pool = null;
         WrapperConnection conn = null;
         try {
             pool = ConnectionPool.getInstance();
             conn = pool.getConnection();
             UserDAO dao = new UserDAO(conn);
-            user = dao.findEntityByString(login);
+            user = dao.findEntityByLogin(login);
             if (user == null) {
                 return null;
             }

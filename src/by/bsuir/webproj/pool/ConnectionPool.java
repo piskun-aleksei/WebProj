@@ -40,7 +40,7 @@ public class ConnectionPool {
     private ConnectionPool() {
         property = new Properties();
         try {
-            DriverManager.registerDriver(new Driver());
+            DriverManager.registerDriver(new Driver()); /** Check a system for needed command to be existing **/
             LOGGER.debug("Driver set");
             ResourceBundle resource = ResourceBundle.getBundle("resources.database");
             String url = resource.getString("url");
@@ -113,7 +113,7 @@ public class ConnectionPool {
     }
 
     public void closePool() {
-        connectionsToOffer.set(false);
+        connectionsToOffer.set(false); /** Release all pool connections **/
         for (int i = 0; i < maxPool; i++) {
             try {
                 connections.take().closeConnection();

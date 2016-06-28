@@ -48,7 +48,7 @@ public class Controller extends HttpServlet {
         String page = null;
         CommandFactory client = new CommandFactory();
 
-        ActionCommand command = client.defineCommand(request);
+        ActionCommand command = client.defineCommand(request); /** Check a system for needed command to be existing **/
         try {
             page = command.execute(request);
         } catch (CommandException e) {
@@ -56,7 +56,7 @@ public class Controller extends HttpServlet {
         }
         if (page != null) {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
-            dispatcher.forward(request, response);
+            dispatcher.forward(request, response); /** If command executing was successful - send a result page to a client**/
         } else {
             request.getSession().setAttribute("nullPage",
                  page);
@@ -66,9 +66,7 @@ public class Controller extends HttpServlet {
 
     @Override
     public void destroy(){
-
             ConnectionPool.getInstance().closePool();
-
     }
 
 

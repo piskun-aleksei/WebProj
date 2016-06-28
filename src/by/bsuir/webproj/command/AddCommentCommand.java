@@ -25,8 +25,8 @@ public class AddCommentCommand implements ActionCommand {
     public String execute(HttpServletRequest request) throws CommandException {
         String result;
         try {
-            int pid = (int) request.getSession().getAttribute(USER_ID);
             String desc = request.getParameter(DESC);
+            int pid = (int) request.getSession().getAttribute(USER_ID);
             int fid = Integer.parseInt(request.getParameter(FILM_ID));
             int rating = Integer.parseInt(request.getParameter(RATING));
             request.setAttribute(PAGE, request.getAttribute(PAGE));
