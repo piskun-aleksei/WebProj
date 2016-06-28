@@ -14,10 +14,10 @@
             <form name="FilmAddingForm" action="controller" method="POST">
                 <input type="hidden" name="command" value="addFilm" />
                 <input type="hidden" name="page" value="/jsp/add_film.jsp" />
-                <input type="text" name="name" placeholder="<fmt:message key="Label.filmName" bundle="${rb}"/>" class="input-field"/>
-                <textarea name="desc" placeholder="<fmt:message key="Label.filmDesc" bundle="${rb}"/>" class="desc-field"> </textarea>
-                <input type="text" name="ageRating" placeholder="<fmt:message key="Label.ageRating" bundle="${rb}"/>" class="input-field" pattern="[1-9]{1,1}[0-9]{0,1}"/>
-                <input type="text" name="price" placeholder="<fmt:message key="Label.filmPrice" bundle="${rb}"/>" class="input-field" pattern="[1-9]{1,1}[0-9]{0,2}"/>
+                <input type="text" name="name" placeholder="<fmt:message key="Label.filmName" bundle="${rb}"/>" class="input-field" required/>
+                <textarea name="desc" placeholder="<fmt:message key="Label.filmDesc" bundle="${rb}"/>" class="desc-field" required> </textarea>
+                <input type="text" name="ageRating" placeholder="<fmt:message key="Label.ageRating" bundle="${rb}"/>" class="input-field" pattern="[1-9]{1,1}[0-9]{0,1}" required/>
+                <input type="text" name="price" placeholder="<fmt:message key="Label.filmPrice" bundle="${rb}"/>" class="input-field" pattern="[1-9]{1,1}[0-9]{0,2}" required/>
                 <div class="error-message">${errorMessage}</div>
                 <br/>
                 <input type="submit" name="addButton" class="input-button" value=<fmt:message key="Button.addFilm" bundle="${rb}" /> />

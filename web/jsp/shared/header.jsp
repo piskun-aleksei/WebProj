@@ -25,7 +25,7 @@
         <form name="LoginForm" action="controller" method="POST">
             <input type="hidden" name="command" value="login" />
             <input type="hidden" name="page" value="/jsp/login.jsp" />
-            <input type="text" name="login" placeholder="<fmt:message key="Label.login" bundle="${rb}"/>" class="input-field"/>
+            <input type="text" name="login" placeholder="<fmt:message key="Label.login" bundle="${rb}"/>" class="input-field" required/>
             <input type="password" name="password" placeholder="<fmt:message key="Label.password" bundle="${rb}"/>" class="input-field" value="" pattern="[A-z]{1,1}[A-z0-9]{3,}" required/>
             <div class="error-message">${errorLoginMessage}</div>
             <br/>

@@ -20,7 +20,7 @@
                     <option value="${elem.id}">${elem.name}</option>
                 </c:forEach>
             </select>
-            <textarea name="desc" placeholder="<fmt:message key="Label.filmDesc" bundle="${rb}"/>" class="desc-field"> </textarea>
+            <textarea name="desc" placeholder="<fmt:message key="Label.filmDesc" bundle="${rb}"/>" class="desc-field" required> </textarea>
             <input type="text" name="rating" placeholder="<fmt:message key="Label.commentRating" bundle="${rb}"/>"
                    class="input-field" pattern="(10)|([0-9]{1,1})"/>
             <div class="error-message">${errorMessage}</div>

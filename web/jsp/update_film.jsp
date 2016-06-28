@@ -15,10 +15,10 @@
         <input type="hidden" name="command" value="updateFilm" />
         <input type="hidden" name="page" value="/jsp/profile.jsp" />
         <input type="hidden" name="filmId" value="${film.id}" />
-        <input type="text" name="name" value="${film.name}" placeholder="<fmt:message key="Label.filmName" bundle="${rb}"/>" class="input-field-unchecked"/>
-        <textarea name="desc" value="${film.desc}" placeholder="<fmt:message key="Label.filmDesc" bundle="${rb}"/>" class="desc-field"> </textarea>
-        <input type="text" name="ageRating" value="${film.ageRating}" placeholder="<fmt:message key="Label.ageRating" bundle="${rb}"/>" class="input-field-unchecked" pattern="[1-9]{1,1}[0-9]{0,1}"/>
-        <input type="text" name="price" value="${film.price}" placeholder="<fmt:message key="Label.filmPrice" bundle="${rb}"/>" class="input-field-unchecked" pattern="[1-9]{1,1}[0-9]{0,2}"/>
+        <input type="text" name="name" value="${film.name}" placeholder="<fmt:message key="Label.filmName" bundle="${rb}"/>" class="input-field-unchecked" required/>
+        <textarea name="desc" value="${film.desc}" placeholder="<fmt:message key="Label.filmDesc" bundle="${rb}"/>" class="desc-field" required> </textarea>
+        <input type="text" name="ageRating" value="${film.ageRating}" placeholder="<fmt:message key="Label.ageRating" bundle="${rb}"/>" class="input-field-unchecked" pattern="[1-9]{1,1}[0-9]{0,1}" required/>
+        <input type="text" name="price" value="${film.price}" placeholder="<fmt:message key="Label.filmPrice" bundle="${rb}"/>" class="input-field-unchecked" pattern="[1-9]{1,1}[0-9]{0,2}" required/>
         <div class="error-message">${errorMessage}</div>
         <br/>
         <input type="submit" name="addButton" class="input-button" value=<fmt:message key="Button.updateFilm" bundle="${rb}" /> />
